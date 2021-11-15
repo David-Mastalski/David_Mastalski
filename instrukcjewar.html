@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- 1. Napisz program, który dla wczytanej liczby całkowitej wypisuje, czy jest ona parzysta czy nieparzysta. -->
+
+    <form action="" method="POST">
+        <input type="number" name="liczba">
+        <input type="submit" value="Sprawdź">
+    </form>
+    <div class="wynik"></div>
+
+    <script>
+        const formularz = document.querySelector("form");
+        const div = document.querySelector(".wynik");
+
+        formularz.addEventListener("submit", (e)=> {
+            e.preventDefault();
+            const liczba = document.querySelector('input[name="liczba"]').value*1;
+            if(liczba%2==0){
+                div.textContent = `Liczba ${liczba} jest parzysta`;
+            }else{
+                div.textContent = `Liczba ${liczba} nie jest parzysta`;
+            }
+        });
+    </script>
+</body>
+</html>
