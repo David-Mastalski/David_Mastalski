@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    background: rgb(238, 238, 238);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    background: white;
+    border-radius: 8px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+    -webkit-box-shadow: 0px 0px 26px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 26px -7px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 26px -7px rgba(66, 68, 90, 1);
+}
+
+.container h1{
+    color: rgb(158, 129, 75);
+    font-weight: 100;
+    font-size: 40px;
+    padding: 1em 0 .5em;
+}
+
+::placeholder{
+    text-align: left;
+    padding-left: 20px;
+}
+input{
+    display: block;
+    border-radius: 5px;
+}
+
+input[type=number]{
+    border: 2px solid rgb(158, 129, 75);
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: .5s;
+    text-align: center;
+    outline:none;
+}
+
+input[type=number]:hover{
+    background-color: rgb(212, 196, 165);
+}
+
+.submit-wynik-container{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=submit]{
+    background-color: rgb(212, 171, 100);
+    border: 2px solid rgb(158, 129, 75);
+    color: white;
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(197, 177, 136);
+    color: rgb(158, 129, 75);
+}
+
+.wynik{
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    height: 40px;
+    width: 60%;
+}
