@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Napisz program wyznaczający NWD (Największy Wspólny Dzielnik) liczb a i b .-->
+
+    <form action="" method="POST">
+        <legend>Podaj liczbe a: </legend>
+        <input type="number" name="a">
+
+        <legend>Podaj liczbe b: </legend>
+        <input type="number" name="b">
+
+        <input type="submit" value="Pokaż">
+    </form>
+
+    <div class="wynik"></div>
+
+    <script>
+        const formularz = document.querySelector("form");
+        const div = document.querySelector('.wynik').value*1;
+
+        formularz.addEventListener("submit", (e)=> {
+            e.preventDefault();
+            const a = document.querySelector('input[name="a"]').value*1;
+            const b = document.querySelector('input[name="b"]').value*1;
+           
+            while (a!=b){
+                if (a<b){
+                    a=a-b;
+                }else{
+                    b=b-a;
+                }
+            }
+            div.textContent = `Liczba ${w} to NWD liczby ${a} i ${b} `;
+        });
+
+    </script>
+</body>
+</html>
+
