@@ -1,4 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    padding: 30px;
-    text-align: center;
+    font-family: Arial;
+    color: white;
+    padding: 10px;
+}
+
+.naglowek{
+    background-color: orange;
+}
+
+.diw{
+    background-color: green;
+}
+
+.akapit1{
+    background-color: blue;
+}
+
+.akapit2{
+    background-color: purple;
+}
+
+.zmianaStyliDiva{
+    background-color: blue;
+    color:yellow;
+    font-size: 64px;
 }

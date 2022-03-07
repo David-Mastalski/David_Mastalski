@@ -1,21 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Zadankoo </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="naglowek">Seba Mordarski lubi chłopców</h1>
+    <div class="diw">Kacper Lelito sprzedaje kostki</div>
+    <p class="akapit1">Przemek Kumor lubi siusiaki</p>
+    <p class="akapit2">Jakub Godawski ma piekny fryz</p>
 
-        <script>
-            const promien = prompt('Podaj promien');
-            const pole = Math.PI * promien * promien;
-            const obwod = 2 * Math.PI * promien;
+    <script>
+        // Zadanie 1 
+        // pobieramy akapit
+        const p1 = document.querySelector('.akapit1');
 
-            document.write(`Wartość promienia wynosi ${promien} </br>`);
-            document.write(`Wartyość pola wynosi: ${pole.toFixed(2)} </br>`);
-            document.write(`Wartość obwodu wynosi:  ${obwod.toFixed(2)} </br>`);
+        // dodajemy do akapitu tresc
+        p1.innerHTML += '<br>Piotrek mówi: "Tak jest! Tak jest!"';
+    
+        // Zadanie 2
+        const naglowekH1 = document.querySelector('h1');
+        naglowekH1.innerHTML = 'Przemek lubi chłopców';
 
-        </script>
+        // Zadanie 3
+        const div = document.querySelector('.diw');
+        // zmieniamy styl czcionki
+        div.style.fontFamily = 'Courier New';
+        div.classList.add('zmianaStyliDiva');
 
-    </body>
+        div.innerHTML = 'Kacper Jelito sprzedaje kostki';
+
+        // Zadanie 4
+        const nowyNaglowek = document.createElement('h2')
+        nowyNaglowek.innerHTML = 'Kacper sprzedal kostki';
+
+        const p2 = document.querySelector('.akapit2');
+        p2.appendChild(nowyNaglowek);
+
+        // Zadanie 5
+
+        p1.remove();
+
+    </script>
+</body>
 </html>
