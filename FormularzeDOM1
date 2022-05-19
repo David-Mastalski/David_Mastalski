@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Umieść na stronie kilka pól wyboru typu checkbox oraz przycisk. Po kliknięciu przycisku na stronie ma zostać wyświetlona informacja o wartościach zaznaczonych pól. -->
+
+    <form action="" method="POST">
+        <div>
+            <input type="checkbox" name="auta" id="bmw" value="BMW">
+            <label for="bmw">BMW</label>
+        </div>
+        <div>
+            <input type="checkbox" name="auta" id="porsche" value="Porsche">
+            <label for="porsche">Porsche</label>  
+        </div>
+        <div>
+            <input type="checkbox" name="auta" id="mercedes" value="Mercedes">
+            <label for="mercedes">Mercedes</label>    
+        </div>
+        <div>
+            <input type="submit" value="Wyślij">
+        </div>
+    </form>
+
+    <div class="wynik">Zaznaczyłeś: </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const checkbox = document.querySelectorAll('input[type="checkbox"]');
+        const wynik = document.querySelector('.wynik');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            for(i = 0; i <= checkbox.length; i++){
+                if(checkbox[i].checked){
+                    wynik.innerHTML += 
+                    `
+                        <p>${checkbox[i].value}</p>
+                    `;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
